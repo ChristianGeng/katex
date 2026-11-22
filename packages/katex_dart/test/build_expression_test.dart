@@ -842,6 +842,14 @@ void main() {
       expect(root.width, closeTo(1.18750, 1e-3));
     });
 
+    test(r'x_{y^2_j}: nested paired scripts, depth and width', () {
+      final root = renderToBox(r'x_{y^2_j}');
+      expect(vlistsOf(root), hasLength(2));
+      expect(root.height, closeTo(0.43056, 1e-4));
+      expect(root.depth, closeTo(0.54160, 1e-4));
+      expect(root.width, closeTo(1.29003, 1e-3));
+    });
+
     test(r'top-level scripts keep their KaTeX positions (x^2, x_i, x^2_i)', () {
       expect(vlistsOf(renderToBox('x^2')).single.positions.single.shift, closeTo(-0.363, 1e-4));
       expect(vlistsOf(renderToBox('x_i')).single.positions.single.shift, closeTo(0.15, 1e-4));
