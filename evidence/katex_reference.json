@@ -1,0 +1,348 @@
+{
+  "katexVersion": "0.17.0",
+  "hostFontSizePx": 40,
+  "emPx": 48.4,
+  "units": "em = KaTeX 1em = 1.21 x host font-size (.katex { font: 1.21em KaTeX_Main }) = 48.4 px at 40 px host size",
+  "method": [
+    "root.height/depth: katex.__renderToDomTree(tex,{displayMode}) (same as reference/generate_fixtures.mjs); width is null there (CSS-driven), so browser widths are given instead",
+    "browser.*: Chromium (Playwright), katex.min.css + KaTeX fonts from node_modules, host font-size 40px, device scale 1, numbers divided by emPx",
+    "baselines: bottom edge of a 0x0 inline-block probe inserted as first child of the element; shift = baselineA - baselineB",
+    "vlist shifts from CSS: -(computed top + computed pstrut height) of the vlist child span",
+    "horizontal: getBoundingClientRect of the inline spans; glue = margin-right of .mspace spans",
+    "strutHeightEm / strutDepthEm: .strut rect against the baseline probe (= root height/depth); browser numbers are rounded to 3 decimals (layout is in 1/64 px), root.* to 5 decimals",
+    "sup.*Shift: upward shift of the script baseline in KaTeX base em; the nested vlist CSS is in script em (0.7), nestedShiftFromCss 0.302 = 0.431 script em x 0.7"
+  ],
+  "entries": [
+    {
+      "id": "issue3-e-sup-display",
+      "issue": 3,
+      "tex": "e^{-x^2/2}",
+      "displayMode": true,
+      "katexVersion": "0.17.0",
+      "root": {
+        "height": 1.03692,
+        "depth": 0,
+        "width": null
+      },
+      "browser": {
+        "emPx": 48.4,
+        "fontPx": 40,
+        "strutHeightEm": 1.037,
+        "strutDepthEm": 0,
+        "baseWidthEm": 2.461,
+        "katexHtmlWidthEm": 2.461,
+        "sup": {
+          "outerShiftFromCss": 0.413,
+          "outerShiftFromBaselines": 0.413,
+          "nestedShiftFromCss": 0.302,
+          "nestedShiftFromBaselines_aboveX": 0.302,
+          "nestedBaselineAboveE": 0.715,
+          "outerSizeMultiplier": 0.7,
+          "nestedSizeMultiplier": 0.5,
+          "scriptSpaceAfterOuter_marginRight": 0.05,
+          "scriptSpaceAfterNested_marginRight": 0.05,
+          "supRightEdgeEm": 2.461
+        }
+      },
+      "fontsLoaded": 2,
+      "png": {
+        "file": "issue3-e-sup-display.png",
+        "devicePixelRatio": 2,
+        "widthPx": 243,
+        "heightPx": 118
+      }
+    },
+    {
+      "id": "issue3-e-sup-inline",
+      "issue": 3,
+      "tex": "e^{-x^2/2}",
+      "displayMode": false,
+      "katexVersion": "0.17.0",
+      "root": {
+        "height": 0.98692,
+        "depth": 0,
+        "width": null
+      },
+      "browser": {
+        "emPx": 48.4,
+        "fontPx": 40,
+        "strutHeightEm": 0.987,
+        "strutDepthEm": 0,
+        "baseWidthEm": 2.461,
+        "katexHtmlWidthEm": 2.461,
+        "sup": {
+          "outerShiftFromCss": 0.363,
+          "outerShiftFromBaselines": 0.363,
+          "nestedShiftFromCss": 0.302,
+          "nestedShiftFromBaselines_aboveX": 0.302,
+          "nestedBaselineAboveE": 0.665,
+          "outerSizeMultiplier": 0.7,
+          "nestedSizeMultiplier": 0.5,
+          "scriptSpaceAfterOuter_marginRight": 0.05,
+          "scriptSpaceAfterNested_marginRight": 0.05,
+          "supRightEdgeEm": 2.461
+        }
+      },
+      "fontsLoaded": 2,
+      "png": {
+        "file": "issue3-e-sup-inline.png",
+        "devicePixelRatio": 2,
+        "widthPx": 243,
+        "heightPx": 114
+      }
+    },
+    {
+      "id": "issue4-frac-display",
+      "issue": 4,
+      "tex": "\\frac{1}{1+x}",
+      "displayMode": true,
+      "katexVersion": "0.17.0",
+      "root": {
+        "height": 1.32144,
+        "depth": 0.76933,
+        "width": null
+      },
+      "browser": {
+        "emPx": 48.4,
+        "fontPx": 40,
+        "strutHeightEm": 1.322,
+        "strutDepthEm": 0.769,
+        "baseWidthEm": 2.534,
+        "katexHtmlWidthEm": 2.534,
+        "frac": {
+          "denominatorSizeMultiplier": 1,
+          "glueBeforePlusEm": 0.222,
+          "glueAfterPlusEm": 0.222,
+          "distanceOneRightToPlusLeftEm": 0.222,
+          "distancePlusRightToXLeftEm": 0.222,
+          "advance1Em": 0.5,
+          "advancePlusEm": 0.778,
+          "advanceXEm": 0.572,
+          "denominatorWidthEm": 2.294,
+          "numeratorWidthEm": 0.5,
+          "fracWidthEm": 2.294,
+          "nulldelimiterOpenEm": 0.12,
+          "nulldelimiterCloseEm": 0.12,
+          "barRowShiftEm": 0.23,
+          "denominatorShiftEm": -0.686,
+          "numeratorShiftEm": 0.677
+        }
+      },
+      "fontsLoaded": 2,
+      "png": {
+        "file": "issue4-frac-display.png",
+        "devicePixelRatio": 2,
+        "widthPx": 238,
+        "heightPx": 221
+      }
+    },
+    {
+      "id": "issue4-frac-inline",
+      "issue": 4,
+      "tex": "\\frac{1}{1+x}",
+      "displayMode": false,
+      "katexVersion": "0.17.0",
+      "root": {
+        "height": 0.84511,
+        "depth": 0.40333,
+        "width": null
+      },
+      "browser": {
+        "emPx": 48.4,
+        "fontPx": 40,
+        "strutHeightEm": 0.845,
+        "strutDepthEm": 0.403,
+        "baseWidthEm": 1.535,
+        "katexHtmlWidthEm": 1.535,
+        "frac": {
+          "denominatorSizeMultiplier": 0.7,
+          "glueBeforePlusEm": 0,
+          "glueAfterPlusEm": 0,
+          "distanceOneRightToPlusLeftEm": 0,
+          "distancePlusRightToXLeftEm": 0,
+          "advance1Em": 0.35,
+          "advancePlusEm": 0.545,
+          "advanceXEm": 0.401,
+          "denominatorWidthEm": 1.295,
+          "numeratorWidthEm": 0.35,
+          "fracWidthEm": 1.295,
+          "nulldelimiterOpenEm": 0.12,
+          "nulldelimiterCloseEm": 0.12,
+          "barRowShiftEm": 0.23,
+          "denominatorShiftEm": -0.345,
+          "numeratorShiftEm": 0.394
+        }
+      },
+      "fontsLoaded": 2,
+      "png": {
+        "file": "issue4-frac-inline.png",
+        "devicePixelRatio": 2,
+        "widthPx": 140,
+        "heightPx": 139
+      }
+    },
+    {
+      "id": "issue5-array-c",
+      "issue": 5,
+      "tex": "\\begin{array}{c} 1 \\\\ 22 \\\\ 333 \\end{array}",
+      "displayMode": true,
+      "katexVersion": "0.17.0",
+      "root": {
+        "height": 2.05,
+        "depth": 1.55,
+        "width": null
+      },
+      "browser": {
+        "emPx": 48.4,
+        "fontPx": 40,
+        "strutHeightEm": 2.05,
+        "strutDepthEm": 1.55,
+        "baseWidthEm": 2.499,
+        "katexHtmlWidthEm": 2.499,
+        "mtableWidthEm": 2.499,
+        "arraycolsepEm": [
+          0.5,
+          0.5
+        ],
+        "columns": [
+          {
+            "align": "c",
+            "columnWidthEm": 1.5,
+            "columnLeftFromTableEm": 0.5,
+            "cells": [
+              {
+                "text": "1",
+                "offsetLeftEm": 0.5,
+                "widthEm": 0.5,
+                "offsetRightEm": 0.5,
+                "rowShiftEm": 1.21
+              },
+              {
+                "text": "22",
+                "offsetLeftEm": 0.25,
+                "widthEm": 1,
+                "offsetRightEm": 0.25,
+                "rowShiftEm": 0.01
+              },
+              {
+                "text": "333",
+                "offsetLeftEm": 0,
+                "widthEm": 1.5,
+                "offsetRightEm": 0,
+                "rowShiftEm": -1.19
+              }
+            ]
+          }
+        ]
+      },
+      "fontsLoaded": 2,
+      "png": {
+        "file": "issue5-array-c.png",
+        "devicePixelRatio": 2,
+        "widthPx": 154,
+        "heightPx": 316
+      }
+    },
+    {
+      "id": "issue5-array-lcr",
+      "issue": 5,
+      "tex": "\\begin{array}{lcr} a & bb & ccc \\\\ dddd & e & f \\end{array}",
+      "displayMode": true,
+      "katexVersion": "0.17.0",
+      "root": {
+        "height": 1.45,
+        "depth": 0.95,
+        "width": null
+      },
+      "browser": {
+        "emPx": 48.4,
+        "fontPx": 40,
+        "strutHeightEm": 1.45,
+        "strutDepthEm": 0.95,
+        "baseWidthEm": 7.235,
+        "katexHtmlWidthEm": 7.235,
+        "mtableWidthEm": 7.235,
+        "arraycolsepEm": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "columns": [
+          {
+            "align": "l",
+            "columnWidthEm": 2.08,
+            "columnLeftFromTableEm": 0.5,
+            "cells": [
+              {
+                "text": "a",
+                "offsetLeftEm": 0,
+                "widthEm": 0.529,
+                "offsetRightEm": 1.551,
+                "rowShiftEm": 0.61
+              },
+              {
+                "text": "dddd",
+                "offsetLeftEm": 0,
+                "widthEm": 2.08,
+                "offsetRightEm": 0,
+                "rowShiftEm": -0.59
+              }
+            ]
+          },
+          {
+            "align": "c",
+            "columnWidthEm": 0.858,
+            "columnLeftFromTableEm": 3.579,
+            "cells": [
+              {
+                "text": "bb",
+                "offsetLeftEm": 0,
+                "widthEm": 0.858,
+                "offsetRightEm": 0,
+                "rowShiftEm": 0.61
+              },
+              {
+                "text": "e",
+                "offsetLeftEm": 0.196,
+                "widthEm": 0.466,
+                "offsetRightEm": 0.196,
+                "rowShiftEm": -0.59
+              }
+            ]
+          },
+          {
+            "align": "r",
+            "columnWidthEm": 1.299,
+            "columnLeftFromTableEm": 5.436,
+            "cells": [
+              {
+                "text": "ccc",
+                "offsetLeftEm": 0,
+                "widthEm": 1.299,
+                "offsetRightEm": 0,
+                "rowShiftEm": 0.61
+              },
+              {
+                "text": "f",
+                "offsetLeftEm": 0.702,
+                "widthEm": 0.598,
+                "offsetRightEm": 0,
+                "rowShiftEm": -0.59
+              }
+            ]
+          }
+        ]
+      },
+      "fontsLoaded": 2,
+      "png": {
+        "file": "issue5-array-lcr.png",
+        "devicePixelRatio": 2,
+        "widthPx": 617,
+        "heightPx": 220
+      }
+    }
+  ]
+}
